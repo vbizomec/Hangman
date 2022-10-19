@@ -1,6 +1,6 @@
 public class Hangman {
 
-    private static void printHangman(int badGuessesCount) {
+    public void printHangman(int badGuessesCount) {
         int poleLines = 6;   // number of lines for hanging pole
         System.out.println("  ____");
         System.out.println("  |  |");
@@ -22,16 +22,13 @@ public class Hangman {
                 System.out.println("  | \\|");
             } else if (badGuessesCount >= 4) {
                 System.out.println("  | \\|/");
+                System.out.println("  |  |");
             }
         }
-        if (badGuessesCount > 4) {
-            poleLines = 3;
-            System.out.println("  |  |");
-        }
-        if (badGuessesCount == 6) {
+        if (badGuessesCount == 5) {
             poleLines = 2;
             System.out.println("  | /");
-        } else if (badGuessesCount >= 7) {
+        } else if (badGuessesCount >= 6) {
             poleLines = 0;
             System.out.println("  | / \\");
         }

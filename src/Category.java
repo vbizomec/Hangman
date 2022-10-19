@@ -7,11 +7,11 @@ public class Category {
 
     public Country countryList() {
 
-        countries.add(new Country("Slovakia"));
-        countries.add(new Country("Hungary"));
-        countries.add(new Country("Poland"));
-        countries.add(new Country("Germany"));
-        countries.add(new Country("Croatia"));
+        countries.add(new Country("slovakia"));
+        countries.add(new Country("hungary"));
+        countries.add(new Country("poland"));
+        countries.add(new Country("germany"));
+        countries.add(new Country("croatia"));
 
         Random random_method = new Random();
         //random index of array
@@ -28,11 +28,11 @@ public class Category {
     private ArrayList<Planet> planets = new ArrayList<>();
     public Planet planetList() {
 
-        planets.add(new Planet("Mercury"));
-        planets.add(new Planet("Venus"));
-        planets.add(new Planet("Earth"));
-        planets.add(new Planet("Jupiter"));
-        planets.add(new Planet("Neptune"));
+        planets.add(new Planet("mercury"));
+        planets.add(new Planet("venus"));
+        planets.add(new Planet("earth"));
+        planets.add(new Planet("jupiter"));
+        planets.add(new Planet("neptune"));
 
         Random random_method2 = new Random();
 
@@ -50,11 +50,11 @@ public class Category {
     private ArrayList<Animal> animal = new ArrayList<>();
     public Animal animalList() {
 
-        animal.add(new Animal("Horse"));
-        animal.add(new Animal("Turtle"));
-        animal.add(new Animal("Kangaroo"));
-        animal.add(new Animal("Rabbit"));
-        animal.add(new Animal("Zebra"));
+        animal.add(new Animal("horse"));
+        animal.add(new Animal("turtle"));
+        animal.add(new Animal("kangaroo"));
+        animal.add(new Animal("rabbit"));
+        animal.add(new Animal("zebra"));
 
         Random random_method3 = new Random();
 
