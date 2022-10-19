@@ -69,64 +69,96 @@ public class Main {
 
             if (option == 2) {
                 String randomWord1 = planet1.planetList().getPlanet();
-                String underscores1 = randomWord1.replaceAll("[a-zA-Z]", "_ ");
+                String underscores1 = randomWord1.replaceAll("[a-zA-Z]", "_");
                 System.out.println(underscores1);
+                StringBuilder hiddenWord = new StringBuilder(underscores1);
                 StringBuilder hiddenWord1 = new StringBuilder(underscores1);
                 ArrayList<Character> charList1 = new ArrayList<>();
-                int guessCount1 = 0;
-                int guessLimit1 = 9;
-                Scanner scan1 = new Scanner(System.in);
-                while (!hiddenWord1.toString().equals(randomWord1) && guessCount1 != guessLimit1) {
-                    String userInput1 = scan1.nextLine();
-                    userInput1 = userInput1.toLowerCase();
-                    char aa = userInput1.charAt(0);
-                    if (!charList1.contains(aa) && guessCount1 != guessLimit1) {
+                int wrongCount = 0;
+                int guessLimit = 6;
+                charList1.add('-');
+                boolean letterGuess = true;
+                Scanner scan = new Scanner(System.in);
+                while (!hiddenWord.toString().equals(randomWord1) && wrongCount != guessLimit) {
+                    String userInput = scan.nextLine();
+                    userInput = userInput.toLowerCase();
+                    char a = userInput.charAt(0);
+
+                    if (!charList1.contains(a)) {
                         for (int i = 0; i < randomWord1.length(); i++) {
-                            if (randomWord1.charAt(i) == aa) {
-                                hiddenWord1.setCharAt(i, aa);
+                            if (randomWord1.charAt(i) == a) {
+                                hiddenWord.setCharAt(i, a);
+                                letterGuess = false;
                             }
-                            charList1.add(aa);
+                            charList1.add(a);
                         }
-                        System.out.println("You have left  " + (guessLimit1 - guessCount1) + " guesses.");
-                        System.out.println(hiddenWord1);
-                        guessCount1++;
-                    } else if (charList1.contains(aa)) {
+                        if (letterGuess) {
+                            wrongCount++;
+                            hangman.printHangman(wrongCount);
+
+                        }
+                        letterGuess = true;
+                        System.out.println("You have left  " + (guessLimit - wrongCount) + " guesses.");
+                        System.out.println(hiddenWord);
+
+                    } else if (charList1.contains(a)) {
                         System.out.println(" You already entered this letter. Enter a new letter again:");
-                    } else if (guessCount1 == guessLimit1) {
+                    } else if (wrongCount == guessLimit) {
                         System.out.println(" Out of guesses.");
                         System.out.println(" The word is " + randomWord1);
                     }
                 }
+                if (randomWord1.equals(hiddenWord.toString())) {
+                    System.out.println("You WIN!!! ");
+                } else {
+                    System.out.println("Sorry You Lost");
+                }
             }
+
             if (option == 3) {
                 String randomWord3 = animal1.animalList().getAnimal();
-                String underscores3 = randomWord3.replaceAll("[a-zA-Z]", "_ ");
+                String underscores3 = randomWord3.replaceAll("[a-zA-Z]", "_");
                 System.out.println(underscores3);
-                StringBuilder hiddenWord2 = new StringBuilder(underscores3);
-                ArrayList<Character> charList2 = new ArrayList<>();
-                int guessCount3 = 0;
-                int guessLimit3 = 6;
-                Scanner scan2 = new Scanner(System.in);
-                while (!hiddenWord2.toString().equals(randomWord3) && guessCount3 != guessLimit3) {
-                    String userInput2 = scan2.nextLine();
-                    userInput2 = userInput2.toLowerCase();
-                    char aaa = userInput2.charAt(0);
-                    if (!charList2.contains(aaa) && guessCount3 != guessLimit3) {
+                StringBuilder hiddenWord3 = new StringBuilder(underscores3);
+                ArrayList<Character> charList3 = new ArrayList<>();
+                int wrongCount = 0;
+                int guessLimit = 6;
+                charList3.add('-');
+                boolean letterGuess = true;
+                Scanner scan = new Scanner(System.in);
+                while (!hiddenWord3.toString().equals(randomWord3) && wrongCount != guessLimit) {
+                    String userInput = scan.nextLine();
+                    userInput = userInput.toLowerCase();
+                    char a = userInput.charAt(0);
+
+                    if (!charList3.contains(a)) {
                         for (int i = 0; i < randomWord3.length(); i++) {
-                            if (randomWord3.charAt(i) == aaa) {
-                                hiddenWord2.setCharAt(i, aaa);
+                            if (randomWord3.charAt(i) == a) {
+                                hiddenWord3.setCharAt(i, a);
+                                letterGuess = false;
                             }
-                            charList2.add(aaa);
+                            charList3.add(a);
                         }
-                        System.out.println("You have left  " + (guessLimit3 - guessCount3) + " guesses.");
-                        System.out.println(hiddenWord2);
-                        guessCount3++;
-                    } else if (charList2.contains(aaa)) {
+                        if (letterGuess) {
+                            wrongCount++;
+                            hangman.printHangman(wrongCount);
+
+                        }
+                        letterGuess = true;
+                        System.out.println("You have left  " + (guessLimit - wrongCount) + " guesses.");
+                        System.out.println(hiddenWord3);
+
+                    } else if (charList3.contains(a)) {
                         System.out.println(" You already entered this letter. Enter a new letter again:");
-                    } else if (guessCount3 == guessLimit3) {
+                    } else if (wrongCount == guessLimit) {
                         System.out.println(" Out of guesses.");
                         System.out.println(" The word is " + randomWord3);
                     }
+                }
+                if (randomWord3.equals(hiddenWord3.toString())) {
+                    System.out.println("You WIN!!! ");
+                } else {
+                    System.out.println("Sorry You Lost");
                 }
             }
         } while (true);

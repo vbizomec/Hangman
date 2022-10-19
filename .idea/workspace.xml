@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="b532a04e-398a-4194-8a2e-a8f7cfd7a6ac" name="Changes" comment="First commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Category.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Hangman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hangman.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -49,7 +47,7 @@
       <option name="presentableId" value="Default" />
       <updated>1666018321393</updated>
       <workItem from="1666018322781" duration="29266000" />
-      <workItem from="1666159959001" duration="11535000" />
+      <workItem from="1666159959001" duration="12844000" />
     </task>
     <task id="LOCAL−00001" summary="First commit">
       <created>1666160771579</created>
@@ -63,7 +61,13 @@
       <option name="presentableId" value="LOCAL−00002" />
       <updated>1666160877055</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL−00003" summary="First commit">
+      <created>1666174135984</created>
+      <option name="number" value="LOCAL−00003" />
+      <option name="presentableId" value="LOCAL−00003" />
+      <updated>1666174135984</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
